@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: andylizf
+subtitle: 'Stay determined.'
+description: 'andylizf的OI博客'
+keywords: OI, blog, hexo
+author: Andy Lee
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://andylizf.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -99,3 +99,11 @@ theme: icarus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+widgets:
+    -
+        type: toc
+        position: left
+
+article:
+    thumbnail: true
