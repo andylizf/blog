@@ -21,7 +21,3 @@ script:
 
 after_success:
   - hexo deploy
-
-branches:
-  only:
-    - master
