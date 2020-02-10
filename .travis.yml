@@ -18,19 +18,9 @@ script:
   - hexo clean
   - hexo g
 
-after_script:
-  - git clone ${GH_REF} hexo-public
-  - cp -rf public/* hexo-public/
-  - cd hexo-public
-  - git config user.name "Andy Lee"
-  - git config user.email "andylizf@outlook.com"
-  - git add .
-  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
-  - git push origin master 
+after_success:
+  - hexo deploy
 
 branches:
   only:
     - master
-env:
- global:
-   - GH_REF: https://andylizf:${GH_TOKEN}@github.com/andylizf/blog.git 
