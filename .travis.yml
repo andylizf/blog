@@ -9,6 +9,7 @@ cache:
 before_install:
     - export TZ='Asia/Shanghai'
     - npm install hexo-cli -g
+    - sed -i "s/github_token/${GH_TOKEN}/g" _config.yml || exit 1
 
 install:
   - npm install
