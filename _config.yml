@@ -99,7 +99,9 @@ theme: icarus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
-  repo: https://${GH_TOKEN}@github.com/andylizf/andylizf.github.io
+  github-token: $GH_TOKEN
+  keep-history: true
+  repo: https://github.com/andylizf/andylizf.github.io
   branch: master
 
 widgets:
