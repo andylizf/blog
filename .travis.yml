@@ -9,15 +9,23 @@ cache:
 before_install:
     - export TZ='Asia/Shanghai'
     - npm install hexo-cli -g
-    - sed -i "s/github_token/${GH_TOKEN}/g" _config.yml || exit 1
 
 install:
   - npm install
-  - npm install hexo-deployer-git --save
 
 script:
   - hexo clean
   - hexo g
 
-after_success:
-  - hexo deploy
+after_script:
+  - cd public
+  - git init
+  - git config user.name "andylizf"
+  - git config user.email "andylizf@outlook.com"
+  - git add .
+  - git commit -m "Travis CI Auto Builder"
+  - git push --force --quiet "https://${GH_TOKEN}@github.com/andylizf/andylizf.github.io"
+
+branches:
+  only:
+    - master
