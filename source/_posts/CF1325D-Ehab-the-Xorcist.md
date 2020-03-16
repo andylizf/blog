@@ -27,7 +27,7 @@ $$
 变换得：
 $$
 \begin{align}
-u \oplus a_1 \oplus a_2 + a_1 + a_2 = v
+u \oplus a_1 \oplus a_2 + a_1 + a_2 = v \nonumber
 \end{align}
 $$
 特殊地 ，$a_1 = a_2$可以消去亦或，则$a_1 = a_2 = \frac{v - u}{2}$，此时$a_3 = u$，$(\frac{v - u}{2}, \frac{v - u}{2}, u)$为方程的一组解。
@@ -37,8 +37,8 @@ $$
 此时：
 $$
 \begin{align}
-&u \oplus \frac{v - u}{2} \oplus \frac{v - u}{2} = u\\
-&u + \frac{v - u}{2} + \frac{v - u}{2} = v
+&u \oplus \frac{v - u}{2} \oplus \frac{v - u}{2} = u \nonumber \\
+&u + \frac{v - u}{2} + \frac{v - u}{2} = v \nonumber
 \end{align}
 $$
 
@@ -55,18 +55,18 @@ $$
 假设存在$(a, b)$使得：
 $$
 \begin{align}
-&a \oplus b = u\\
-&a + b = v\\
+&a \oplus b = u \nonumber \\
+&a + b = v \nonumber \\
 \end{align}
 $$
 由亦或、加法与与运算的关系：
 $$
 \begin{align}
-&a \oplus b = u\label{eq1}\\
-&a \wedge b = \frac{v - u}{2}\label{eq1}
+&a \oplus b = u\label{eq3}\\
+&a \wedge b = \frac{v - u}{2}\label{eq4}
 \end{align}
 $$
-这样我们就可以仅考虑$a, b$的每一位。对于$\frac{v - u}{2}$的其中一位，若其为$1$，由$\eqref{eq2}$则$a, b$在此位均为$1$，由$\eqref{eq2}$则$u$在此位为$0$；反之为$0$，则对$u$没有限制。由$u \oplus \frac{v - u}{2} \not= u + \frac{v - u}{2} \rightarrow u \wedge \frac{v - u}{2} \not= 0$，则$u$和$\frac{v- u}{2}$存在一位同时为$1$。矛盾，故不存在这样的$(a,b)$。
+这样我们就可以仅考虑$a, b$的每一位。对于$\frac{v - u}{2}$的其中一位，若其为$1$，由$\eqref{eq3}$则$a, b$在此位均为$1$，由$\eqref{eq4}$则$u$在此位为$0$；反之为$0$，则对$u$没有限制。由$u \oplus \frac{v - u}{2} \not= u + \frac{v - u}{2} \rightarrow u \wedge \frac{v - u}{2} \not= 0$，则$u$和$\frac{v- u}{2}$存在一位同时为$1$。矛盾，故不存在这样的$(a,b)$。
 
 综上所述，$v < u$或$v - u \not\equiv 0 \pmod 2$时无解；一般地，有长度为$3$的解$(\frac{v - u}{2}, \frac{v - u}{2}, u)$；当$u \oplus \frac{v - u}{2} = u + \frac{v - u}{2}$时有长度为$2$的解$(u + \frac{v - u}{2}, \frac{v - u}{2})$；当$u = v$时有长度为$1$的解$u$。注意当$u = v = 0$时，数组长度应为$0$。
 
