@@ -102,4 +102,4 @@ int main()
 ## 注释与参考
 
 1. 题解https://codeforces.com/blog/entry/74235
-2. 感谢oscar学长的讲解
+2. 特别感谢oscar学长的讲解
