@@ -9,6 +9,8 @@ cache:
 before_install:
     - export TZ='Asia/Shanghai'
     - npm install hexo-cli -g
+    - sudo wget https://github.com/jgm/pandoc/releases/download/2.9.2/pandoc-2.9.2-1-amd64.deb
+    - sudo dpkg -i pandoc-2.9.2-1-amd64.deb
 
 install:
   - npm install
