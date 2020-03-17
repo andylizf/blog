@@ -20,8 +20,8 @@ date: 2020-03-15 11:36:14
 考虑数组长度为3时，
 $$
 \begin{align}
-&a_1 \oplus a_2 \oplus a_3 = u \label{eq1}\\
-&a_1 + a_2 + a_3 = v \label{eq2} \\
+&a_1 \oplus a_2 \oplus a_3 = u \nonumber \\
+&a_1 + a_2 + a_3 = v \nonumber \\
 \end{align}
 $$
 变换得：
